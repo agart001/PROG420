@@ -4,7 +4,7 @@ FROM gcc:9.2.0
 WORKDIR /usr/src/app
 
 RUN apt-get -qq update \
-    && apt-get -qq install --no-instaall-recommends cmake \
+    && apt-get -qq install --no-install-recommends cmake \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -18,5 +18,5 @@ RUN cmake .
 
 RUN make
 
-CMD ["./app"]
+CMD ["./main"]
 
