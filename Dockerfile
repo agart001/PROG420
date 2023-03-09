@@ -18,5 +18,5 @@ RUN cmake .
 
 RUN make
 
-CMD ["./main"]
+CMD ["./app"]
 
